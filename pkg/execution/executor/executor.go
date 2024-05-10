@@ -2323,6 +2323,7 @@ func (e executor) AppendAndScheduleBatch(ctx context.Context, fn inngest.Functio
 				AppID:           bi.AppID,
 				FunctionID:      bi.FunctionID,
 				FunctionVersion: bi.FunctionVersion,
+				BatchPointer:    result.BatchPointerKey,
 			},
 			At: at,
 		}); err != nil {
